@@ -12,12 +12,12 @@ import { Target } from 'react-feather'
 const items = (i18n: I18n) => [
        {       
         name: i18n._(t`Swap`),
-        href: 'swap-nav-link'
+        href: './pages/Swap'
         
     },
     {
         name: i18n._(t`Pool`),
-        href: '/pool'
+        href: './pages/Pool'
     },
     {
         name: i18n._(t`Stake`),
