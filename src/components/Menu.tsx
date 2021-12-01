@@ -11,16 +11,16 @@ import { Target } from 'react-feather'
 
 const items = (i18n: I18n) => [
        {       
-        name: i18n._(`Swap`),
+        name: i18n._(t`Swap`),
         href: 'swap-nav-link'
         
     },
     {
-        name: i18n._(`Pool`),
+        name: i18n._(t`Pool`),
         href: '/pool'
     },
     {
-        name: i18n._(`Stake`),
+        name: i18n._(t`Stake`),
         href: '/Stake'            
     },
     // {  
