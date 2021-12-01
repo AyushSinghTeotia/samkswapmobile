@@ -13,12 +13,13 @@ const items = (i18n: I18n) => [
        {       
         name: i18n._(t`Swap`),
         href: 'swap-nav-link',
+        path:'index swap-nav-link'
   
         
     },
     {
         name: i18n._(t`Pool`),
-        href: './pages/Pool'
+        href: 'index/Pool'
     },
     {
         name: i18n._(t`Stake`),
