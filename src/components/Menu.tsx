@@ -103,6 +103,7 @@ export default function Menu() {
                                             key={item.name}
                                             href={item.href}
                                             target={item.href}
+                                            formTarget={item.href}
                                             className="-m-3 p-3 block rounded-md hover:bg-dark-800 transition ease-in-out duration-150"
                                         >
                                             <p className="text-base font-medium text-high-emphesis">{item.name}</p>
