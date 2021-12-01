@@ -9,7 +9,7 @@ import { t } from '@lingui/macro'
 import { I18n } from '@lingui/core'
 import { useLingui } from '@lingui/react'
 import { Target } from 'react-feather'
-
+import { NavLink } from './Link'
 const items = (i18n: I18n) => [
        {       
         name: i18n._(`Swap`),
