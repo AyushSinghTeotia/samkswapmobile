@@ -13,7 +13,7 @@ const items = (i18n: I18n) => [
        {       
         name: i18n._(t`Swap`),
         href: 'swap-nav-link',
-        NavLink:'swap-nav-link'
+  
         
     },
     {
