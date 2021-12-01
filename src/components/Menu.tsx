@@ -105,10 +105,6 @@ export default function Menu() {
                                             className="-m-3 p-3 block rounded-md hover:bg-dark-800 transition ease-in-out duration-150"
                                         >
                                             <p className="text-base font-medium text-high-emphesis">{item.name}</p>
-                                            <NavLink id={`swap-nav-link`} to={'/swap'}>
-                                                {i18n._(t`Swap`)}
-                                            </NavLink>
-                                            {/* <p className="mt-1 text-sm text-secondary">{item.description}</p> */}
                                         </NavLink>
                                     ))}
                                 </div>
