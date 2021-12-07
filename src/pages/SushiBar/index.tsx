@@ -9,7 +9,7 @@ import BalanceCard from './BalanceCard'
 import { ChainId } from 'quest-samkoin-sdk1'
 import { SUSHI, XSUSHI, SAMK, xSAMK } from '../../constants'
 import useTokenBalance from '../../hooks/useTokenBalance'
-
+import _ from "lodash"
 const mockData = {
     sushiEarnings: 345.27898,
     weightedApr: 15.34
@@ -93,8 +93,11 @@ export default function XSushi() {
                 <div className="flex justify-center w-full">
                     <div className="md:hidden flex justify-center w-full max-w-xl mt-6 mb-20">
                         <BalanceCard
-                            sushiEarnings={mockData.sushiEarnings}
-                            xSushiBalance={xSushiBalance}
+                             
+                             sushiEarnings={mockData.sushiEarnings }
+                             xSushiBalance={(xSushiBalance)}
+                             
+                            
                             sushiBalance={sushiBalance}
                             weightedApr={mockData.weightedApr}
                         />

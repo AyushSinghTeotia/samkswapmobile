@@ -4,6 +4,7 @@ import { Popover, Transition } from '@headlessui/react'
 import { classNames } from '../functions/styling'
 import { ExternalLink } from './Link'
 import { ReactComponent as MenuIcon } from '../assets/images/menu.svg'
+import { NavLink } from './Link'
 import { t } from '@lingui/macro'
 import { I18n } from '@lingui/core'
 import { useLingui } from '@lingui/react'
@@ -12,7 +13,7 @@ import { Target } from 'react-feather'
 const items = (i18n: I18n) => [
        {       
         name: i18n._(`Swap`),
-        href: 'swap-nav-link'
+        href: '/swap'
         
     },
     {
@@ -27,8 +28,8 @@ const items = (i18n: I18n) => [
     //     name: i18n._(``),
     //     description: i18n._(``),
     //     href: ''
-    // },
-   
+     // },
+    //ayush
     
 
     // {
@@ -97,15 +98,14 @@ export default function Menu() {
                             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                                 <div className="relative grid gap-6 bg-dark-900 px-5 py-6 sm:gap-8 sm:p-8">
                                     {solutions.map(item => (
-                                        <ExternalLink
+                                        <NavLink
                                             key={item.name}
-                                            href={item.href}
-                                            target={item.href}
+                                            to={item.href}
+                                            //target={item.href}
                                             className="-m-3 p-3 block rounded-md hover:bg-dark-800 transition ease-in-out duration-150"
                                         >
                                             <p className="text-base font-medium text-high-emphesis">{item.name}</p>
-                                            {/* <p className="mt-1 text-sm text-secondary">{item.description}</p> */}
-                                        </ExternalLink>
+                                        </NavLink>
                                     ))}
                                 </div>
                             </div>

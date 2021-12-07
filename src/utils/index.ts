@@ -11,7 +11,7 @@ import { TokenAddressMap } from '../state/lists/hooks'
 import { ethers } from 'ethers'
 import { getAddress } from '@ethersproject/address'
 
-export const formatFromBalance = (value: BigNumber | undefined, decimals = 18): string => {
+export const formatFromBalance = (value: BigNumber | undefined, decimals =18 ): string => {
     if (value) {
         return Fraction.from(BigNumber.from(value), BigNumber.from(10).pow(decimals)).toString()
     } else {

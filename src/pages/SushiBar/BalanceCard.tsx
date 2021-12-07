@@ -33,7 +33,10 @@ export default function BalanceCard({
                         <img className="w-10 md:w-16 -ml-1 mr-1 md:mr-2 -mb-1.5" src={XSushiImage} alt="sushi" />
                         <div className="flex flex-col justify-center">
                             <p className="text-caption2 md:text-lg font-bold text-high-emphesis">
-                                {formatFromBalance(xSushiBalance.value)}
+                                {parseFloat(formatFromBalance(xSushiBalance.value)).toFixed(2)}
+                                {/* parseFloat(value).toFixed(2) */}
+                                {/* {`${xSushiBalance.value ? parseFloat (xSushiBalance.value.toFixed(2)) + '%' : i18n._(t`Loading...`)}`} */}
+                               
                             </p>
                             <p className="text-caption2 md:text-caption text-primary">xSamK</p>
                         </div>
@@ -51,7 +54,8 @@ export default function BalanceCard({
                         <img className="w-10 md:w-16 -ml-1 mr-1 md:mr-2 -mb-1.5" src={SushiImage} alt="sushi" />
                         <div className="flex flex-col justify-center">
                             <p className="text-caption2 md:text-lg font-bold text-high-emphesis">
-                                {formatFromBalance(sushiBalance.value)}
+                                {parseFloat(formatFromBalance(sushiBalance.value)).toFixed(2)}
+                
                                 {/* {sushiEarnings.toPrecision(7)} */}
                             </p>
                             <p className="text-caption2 md:text-caption text-primary">SamK</p>
