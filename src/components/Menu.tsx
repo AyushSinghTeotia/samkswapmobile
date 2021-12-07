@@ -99,8 +99,11 @@ export default function Menu() {
                                 <div className="relative grid gap-6 bg-dark-900 px-5 py-6 sm:gap-8 sm:p-8">
                                     {solutions.map(item => (
                                         <NavLink
-                                            key={item.name}
+                                            
+                                            key={(item.name)}
                                             to={item.href}
+                
+            
                                             //target={item.href}
                                             className="-m-3 p-3 block rounded-md hover:bg-dark-800 transition ease-in-out duration-150"
                                         >

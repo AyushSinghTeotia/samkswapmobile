@@ -79,7 +79,7 @@ export default function StakeCard({ sushiBalance, xSushiBalance }: StakeCardProp
     const [modalOpen, setModalOpen] = useState(false)
 
     const balance: BalanceProps = activeTab === 0 ? sushiBalance : xSushiBalance
-    const formattedBalance = formatFromBalance(balance.value)
+    const formattedBalance = parseFloat(formatFromBalance(balance.value)).toFixed(2)
 
     const [input, setInput] = useState<string>('')
     const [usingBalance, setUsingBalance] = useState(false)
@@ -91,7 +91,7 @@ export default function StakeCard({ sushiBalance, xSushiBalance }: StakeCardProp
         }
     }
     const handleClickMax = () => {
-        setInput(formatFromBalance(balance.value).substring(0, INPUT_CHAR_LIMIT))
+       setInput(formatFromBalance(balance.value).substring(0, INPUT_CHAR_LIMIT))
         setUsingBalance(true)
     }
 
@@ -235,7 +235,7 @@ export default function StakeCard({ sushiBalance, xSushiBalance }: StakeCardProp
                         <div className="flex items-center text-secondary text-caption2 md:text-caption">
                             <div className={input ? 'hidden md:flex md:items-center' : 'flex items-center'}>
                                 <p>{i18n._(t`Balance`)}:&nbsp;</p>
-                                <p className="text-caption font-bold">{formattedBalance}</p>
+                                <p className="text-caption font-bold">{parseFloat(formattedBalance).toFixed(2)}</p>
                             </div>
                             <button
                                 className={`
@@ -246,7 +246,7 @@ export default function StakeCard({ sushiBalance, xSushiBalance }: StakeCardProp
                                     rounded-2xl py-1 px-2 md:py-1 md:px-3 ml-3 md:ml-4
                                     text-xs md:text-caption2 font-bold md:font-normal md:text-cyan-blue
                                 `}
-                                onClick={handleClickMax}
+                                onClick={handleClickMax }
                             >
                                 {i18n._(t`MAX`)}
                             </button>
